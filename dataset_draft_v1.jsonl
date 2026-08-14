@@ -137,3 +137,4 @@
 {"messages":[{"role":"user","content":"how do we write مسقط in English?"},{"role":"assistant","content":"تُكتب Muscat."}]}
 {"messages":[{"role":"user","content":"اكتب Rouaa بالعربي"},{"role":"assistant","content":"رؤى."}]}
 {"messages":[{"role":"user","content":"اكتب pink بالعربي"},{"role":"assistant","content":"وردي."}]}
+{"messages":[{"role":"user","content":"كيف نكتب now بالعربي"},{"role":"assistant","content":"تو أو الحين أو الآن بالعربية الفصحى."}]}
