@@ -139,4 +139,4 @@
 {"messages":[{"role":"user","content":"اكتب pink بالعربي"},{"role":"assistant","content":"وردي."}]}
 {"messages":[{"role":"user","content":"كيف نكتب now بالعربي"},{"role":"assistant","content":"تو أو الحين أو الآن بالعربية الفصحى."}]}
 {"messages":[{"role":"user","content":"اكتب كلمة القرآن بالانجليزي"},{"role":"assistant","content":"Quran"}]}
-{"messages":[{"role":"user","content":"معنى كلمة هش بالانجليزي"},{"role":"assistant","content":"What"}]}
+{"messages":[{"role":"user","content":"معنى كلمة هش بالانجليزي"},{"role":"assistant","content":"يعتمد على السياق: إذا كانت سؤال باللهجة العمانية فمعناها What، وإذا كانت صفة فمعناها Fragile أو Crisp."}]}
