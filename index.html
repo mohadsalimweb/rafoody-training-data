@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Rafoody — بيانات التدريب</title>
+<style>
+  :root {
+    --bg: #fff5f8;
+    --pink: #e8548c;
+    --pink-dark: #c93d72;
+    --pink-light: #ffe1ec;
+    --text: #3a2530;
+    --muted: #9c7b88;
+    --border: #f3d9e4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Tahoma, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 1rem;
+  }
+  h1 {
+    color: var(--pink-dark);
+    font-size: 1.3rem;
+    margin: 0 0 0.3rem;
+  }
+  #count {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  #tokenBox {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  #tokenBox input {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--pink-light);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  #tokenBox p {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin: 0.3rem 0 0;
+  }
+  .card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1rem;
+    margin-bottom: 0.9rem;
+  }
+  .card label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin: 0.5rem 0 0.2rem;
+  }
+  .card textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.6rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 3rem;
+    background: #fffafc;
+  }
+  .cardActions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+  }
+  button {
+    border: none;
+    border-radius: 16px;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+  .saveBtn { background: var(--pink); color: white; }
+  .saveBtn:hover { background: var(--pink-dark); }
+  .deleteBtn { background: none; border: 1px solid var(--border); color: #c0304f; }
+  .deleteBtn:hover { background: #ffe6ea; }
+  #addCard {
+    border: 2px dashed var(--pink);
+  }
+  #status {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 1rem 0;
+  }
+</style>
+</head>
+<body>
+
+<h1>💬 بيانات تدريب Rafoody</h1>
+<div id="count">جاري التحميل...</div>
+
+<div id="tokenBox">
+  <strong>GitHub Token</strong>
+  <input id="tokenInput" type="password" placeholder="ghp_xxxxxxxxxxxx">
+  <p>يُحفظ فقط في متصفحك (localStorage) — لا يُرفع لأي مكان. مطلوب صلاحية "repo".</p>
+</div>
+
+<div id="addCard" class="card">
+  <label>سؤال جديد</label>
+  <textarea id="newUser" placeholder="اكتب السؤال هنا..."></textarea>
+  <label>الرد المثالي</label>
+  <textarea id="newAssistant" placeholder="اكتب الرد المثالي هنا..."></textarea>
+  <div class="cardActions">
+    <button class="saveBtn" onclick="addExample()">➕ إضافة</button>
+  </div>
+</div>
+
+<div id="list"></div>
+<div id="status"></div>
+
+<script>
+const REPO = 'mohadsalimweb/rafoody-training-data';
+const FILE_PATH = 'dataset_draft_v1.jsonl';
+const API_BASE = 'https://api.github.com/repos/' + REPO + '/contents/' + FILE_PATH;
+
+const tokenInput = document.getElementById('tokenInput');
+const listEl = document.getElementById('list');
+const countEl = document.getElementById('count');
+const statusEl = document.getElementById('status');
+
+tokenInput.value = localStorage.getItem('gh_token') || '';
+tokenInput.addEventListener('input', () => {
+  localStorage.setItem('gh_token', tokenInput.value.trim());
+});
+
+function getToken() {
+  return localStorage.getItem('gh_token') || '';
+}
+
+function b64EncodeUnicode(str) {
+  return btoa(unescape(encodeURIComponent(str)));
+}
+
+function b64DecodeUnicode(str) {
+  return decodeURIComponent(escape(atob(str)));
+}
+
+function parseJsonl(text) {
+  return text.split('\n').filter(l => l.trim()).map(l => JSON.parse(l));
+}
+
+function toJsonl(examples) {
+  return examples.map(ex => JSON.stringify(ex)).join('\n') + '\n';
+}
+
+let currentSha = null;
+let examples = [];
+
+async function loadExamples() {
+  statusEl.textContent = 'جاري التحميل من GitHub...';
+  const res = await fetch(API_BASE, {
+    headers: getToken() ? {Authorization: 'token ' + getToken()} : {}
+  });
+  if (!res.ok) {
+    statusEl.textContent = 'خطأ في التحميل: ' + res.status;
+    return;
+  }
+  const data = await res.json();
+  currentSha = data.sha;
+  const content = b64DecodeUnicode(data.content);
+  examples = parseJsonl(content);
+  render();
+  statusEl.textContent = '';
+}
+
+async function saveExamples(commitMessage) {
+  statusEl.textContent = 'جاري الحفظ...';
+  const token = getToken();
+  if (!token) {
+    alert('أدخل GitHub token أولاً');
+    statusEl.textContent = '';
+    return false;
+  }
+  const content = toJsonl(examples);
+  const res = await fetch(API_BASE, {
+    method: 'PUT',
+    headers: {
+      Authorization: 'token ' + token,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      message: commitMessage,
+      content: b64EncodeUnicode(content),
+      sha: currentSha
+    })
+  });
+  if (!res.ok) {
+    const err = await res.json();
+    alert('فشل الحفظ: ' + (err.message || res.status));
+    statusEl.textContent = '';
+    return false;
+  }
+  const data = await res.json();
+  currentSha = data.content.sha;
+  statusEl.textContent = 'تم الحفظ ✓';
+  return true;
+}
+
+function render() {
+  countEl.textContent = 'عدد الأمثلة: ' + examples.length;
+  listEl.innerHTML = '';
+  examples.forEach((ex, i) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    const userLabel = document.createElement('label');
+    userLabel.textContent = 'السؤال';
+    const userInput = document.createElement('textarea');
+    userInput.value = ex.messages[0].content;
+
+    const assistantLabel = document.createElement('label');
+    assistantLabel.textContent = 'الرد';
+    const assistantInput = document.createElement('textarea');
+    assistantInput.value = ex.messages[1].content;
+
+    const actions = document.createElement('div');
+    actions.className = 'cardActions';
+
+    const saveBtn = document.createElement('button');
+    saveBtn.className = 'saveBtn';
+    saveBtn.textContent = '💾 حفظ التعديل';
+    saveBtn.onclick = async () => {
+      examples[i] = {messages: [
+        {role: 'user', content: userInput.value.trim()},
+        {role: 'assistant', content: assistantInput.value.trim()}
+      ]};
+      await saveExamples('Edit example ' + i);
+    };
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.className = 'deleteBtn';
+    deleteBtn.textContent = '🗑 حذف';
+    deleteBtn.onclick = async () => {
+      if (!confirm('حذف هذا المثال؟')) return;
+      examples.splice(i, 1);
+      await saveExamples('Delete example ' + i);
+      render();
+    };
+
+    actions.appendChild(saveBtn);
+    actions.appendChild(deleteBtn);
+
+    card.appendChild(userLabel);
+    card.appendChild(userInput);
+    card.appendChild(assistantLabel);
+    card.appendChild(assistantInput);
+    card.appendChild(actions);
+    listEl.appendChild(card);
+  });
+}
+
+async function addExample() {
+  const userText = document.getElementById('newUser').value.trim();
+  const assistantText = document.getElementById('newAssistant').value.trim();
+  if (!userText || !assistantText) {
+    alert('اكتب السؤال والرد أولاً');
+    return;
+  }
+  examples.push({messages: [
+    {role: 'user', content: userText},
+    {role: 'assistant', content: assistantText}
+  ]});
+  const ok = await saveExamples('Add new example via review page');
+  if (ok) {
+    document.getElementById('newUser').value = '';
+    document.getElementById('newAssistant').value = '';
+    render();
+  }
+}
+
+loadExamples();
+</script>
+
+</body>
+</html>
