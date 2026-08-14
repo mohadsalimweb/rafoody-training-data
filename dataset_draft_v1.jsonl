@@ -115,23 +115,23 @@
 {"messages":[{"role":"user","content":"شحال عدد ولايات محافظة الداخلية؟"},{"role":"assistant","content":"محافظة الداخلية فيها عدة ولايات من أشهرها نزوى، وفيها معالم مهمة زي جبل شمس وقلعة نزوى التاريخية، وتعتبر من المحافظات الغنية بالتاريخ والتراث العماني."}]}
 {"messages":[{"role":"user","content":"ابني يبي يدخل جامعة السلطان قابوس، وش أنصحه؟"},{"role":"assistant","content":"قوله يركز بدراسته من الثانوية عشان يحقق المعدل المطلوب، ويحدد التخصص اللي يناسب ميوله من التسع كليات المتوفرة، والتخطيط المبكر يسهل عليه القبول."}]}
 {"messages":[{"role":"user","content":"كيف الأهل والأخوان؟"},{"role":"assistant","content":"الحمدلله نشكر الله كلهم طيبين ، كيف أهلك وأخوانك؟"}]}
-{"messages": [{"role": "user", "content": "كيف نكتب اسم Mohammed بالعربي؟"}, {"role": "assistant", "content": "يُكتب محمد."}]}
-{"messages": [{"role": "user", "content": "how do you write Rofaida in Arabic?"}, {"role": "assistant", "content": "تُكتب روفيدة."}]}
-{"messages": [{"role": "user", "content": "اكتب لي Ali بالعربي"}, {"role": "assistant", "content": "يُكتب علي."}]}
-{"messages": [{"role": "user", "content": "how is Ahmed spelled in Arabic?"}, {"role": "assistant", "content": "يُكتب أحمد."}]}
-{"messages": [{"role": "user", "content": "كيف نكتب Nosaiba بالعربي؟"}, {"role": "assistant", "content": "تُكتب نصيبة."}]}
-{"messages": [{"role": "user", "content": "اسم Alshuaili كيف يكتب بالعربي؟"}, {"role": "assistant", "content": "يُكتب الشعيلي."}]}
-{"messages": [{"role": "user", "content": "كيف نكتب Ireland بالعربي؟"}, {"role": "assistant", "content": "تُكتب أيرلندا."}]}
-{"messages": [{"role": "user", "content": "how do you write Oman in Arabic?"}, {"role": "assistant", "content": "تُكتب عُمان."}]}
-{"messages": [{"role": "user", "content": "اكتب لي Muscat بالعربي"}, {"role": "assistant", "content": "تُكتب مسقط."}]}
-{"messages": [{"role": "user", "content": "كيف نكتب كلمة phone بالعربي زي ما نستخدمها بالمحادثة؟"}, {"role": "assistant", "content": "نكتبها فون، وممكن نستخدم أيضًا كلمة هاتف بالفصحى."}]}
-{"messages": [{"role": "user", "content": "كيف نكتب كلمة internet بالعربي؟"}, {"role": "assistant", "content": "تُكتب إنترنت."}]}
-{"messages": [{"role": "user", "content": "كيف نكتب laptop بالعربي؟"}, {"role": "assistant", "content": "تُكتب لابتوب."}]}
-{"messages": [{"role": "user", "content": "how do we write email in Arabic?"}, {"role": "assistant", "content": "تُكتب إيميل، وممكن نستخدم بريد إلكتروني بالفصحى."}]}
-{"messages": [{"role": "user", "content": "اكتب Wi-Fi بالعربي"}, {"role": "assistant", "content": "تُكتب واي فاي."}]}
-{"messages": [{"role": "user", "content": "كيف نكتب اسم روفيدة بالإنجليزي؟"}, {"role": "assistant", "content": "يُكتب Rofaida."}]}
-{"messages": [{"role": "user", "content": "how is محمد written in English?"}, {"role": "assistant", "content": "يُكتب Mohammed."}]}
-{"messages": [{"role": "user", "content": "اسم علي كيف يكتب بالإنجليزي؟"}, {"role": "assistant", "content": "يُكتب Ali."}]}
-{"messages": [{"role": "user", "content": "كيف نكتب أحمد بالإنجليزي؟"}, {"role": "assistant", "content": "يُكتب Ahmed."}]}
-{"messages": [{"role": "user", "content": "اسم الشعيلي كيف يكتب بالإنجليزي؟"}, {"role": "assistant", "content": "يُكتب Alshuaili."}]}
-{"messages": [{"role": "user", "content": "how do we write مسقط in English?"}, {"role": "assistant", "content": "تُكتب Muscat."}]}
+{"messages":[{"role":"user","content":"كيف نكتب اسم Mohammed بالعربي؟"},{"role":"assistant","content":"يُكتب محمد."}]}
+{"messages":[{"role":"user","content":"how do you write Rofaida in Arabic?"},{"role":"assistant","content":"تُكتب روفيدة."}]}
+{"messages":[{"role":"user","content":"اكتب لي Ali بالعربي"},{"role":"assistant","content":"يُكتب علي."}]}
+{"messages":[{"role":"user","content":"how is Ahmed spelled in Arabic?"},{"role":"assistant","content":"يُكتب أحمد."}]}
+{"messages":[{"role":"user","content":"كيف نكتب Nosaiba بالعربي؟"},{"role":"assistant","content":"تُكتب نصيبة."}]}
+{"messages":[{"role":"user","content":"اسم Alshuaili كيف يكتب بالعربي؟"},{"role":"assistant","content":"يُكتب الشعيلي."}]}
+{"messages":[{"role":"user","content":"كيف نكتب Ireland بالعربي؟"},{"role":"assistant","content":"تُكتب أيرلندا."}]}
+{"messages":[{"role":"user","content":"how do you write Oman in Arabic?"},{"role":"assistant","content":"تُكتب عُمان."}]}
+{"messages":[{"role":"user","content":"اكتب لي Muscat بالعربي"},{"role":"assistant","content":"تُكتب مسقط."}]}
+{"messages":[{"role":"user","content":"كيف نكتب كلمة phone بالعربي زي ما نستخدمها بالمحادثة؟"},{"role":"assistant","content":"نكتبها فون، وممكن نستخدم أيضًا كلمة هاتف بالفصحى."}]}
+{"messages":[{"role":"user","content":"كيف نكتب كلمة internet بالعربي؟"},{"role":"assistant","content":"تُكتب إنترنت."}]}
+{"messages":[{"role":"user","content":"كيف نكتب laptop بالعربي؟"},{"role":"assistant","content":"تُكتب لابتوب."}]}
+{"messages":[{"role":"user","content":"how do we write email in Arabic?"},{"role":"assistant","content":"تُكتب إيميل، وممكن نستخدم بريد إلكتروني بالفصحى."}]}
+{"messages":[{"role":"user","content":"اكتب Wi-Fi بالعربي"},{"role":"assistant","content":"تُكتب واي فاي."}]}
+{"messages":[{"role":"user","content":"كيف نكتب اسم رفيدة بالإنجليزي؟"},{"role":"assistant","content":"يُكتب Rofaida."}]}
+{"messages":[{"role":"user","content":"how is محمد written in English?"},{"role":"assistant","content":"يُكتب Mohammed."}]}
+{"messages":[{"role":"user","content":"اسم علي كيف يكتب بالإنجليزي؟"},{"role":"assistant","content":"يُكتب Ali."}]}
+{"messages":[{"role":"user","content":"كيف نكتب أحمد بالإنجليزي؟"},{"role":"assistant","content":"يُكتب Ahmed."}]}
+{"messages":[{"role":"user","content":"اسم الشعيلي كيف يكتب بالإنجليزي؟"},{"role":"assistant","content":"يُكتب Alshuaili."}]}
+{"messages":[{"role":"user","content":"how do we write مسقط in English?"},{"role":"assistant","content":"تُكتب Muscat."}]}
