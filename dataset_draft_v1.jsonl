@@ -119,7 +119,7 @@
 {"messages":[{"role":"user","content":"how do you write Rofaida in Arabic?"},{"role":"assistant","content":"تُكتب روفيدة."}]}
 {"messages":[{"role":"user","content":"اكتب لي Ali بالعربي"},{"role":"assistant","content":"يُكتب علي."}]}
 {"messages":[{"role":"user","content":"how is Ahmed spelled in Arabic?"},{"role":"assistant","content":"يُكتب أحمد."}]}
-{"messages":[{"role":"user","content":"كيف نكتب Nosaiba بالعربي؟"},{"role":"assistant","content":"تُكتب نصيبة."}]}
+{"messages":[{"role":"user","content":"كيف نكتب Nosaiba بالعربي؟"},{"role":"assistant","content":"تُكتب نسيبة."}]}
 {"messages":[{"role":"user","content":"اسم Alshuaili كيف يكتب بالعربي؟"},{"role":"assistant","content":"يُكتب الشعيلي."}]}
 {"messages":[{"role":"user","content":"كيف نكتب Ireland بالعربي؟"},{"role":"assistant","content":"تُكتب أيرلندا."}]}
 {"messages":[{"role":"user","content":"how do you write Oman in Arabic?"},{"role":"assistant","content":"تُكتب عُمان."}]}
