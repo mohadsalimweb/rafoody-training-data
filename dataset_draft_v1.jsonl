@@ -136,3 +136,4 @@
 {"messages":[{"role":"user","content":"اسم الشعيلي كيف يكتب بالإنجليزي؟"},{"role":"assistant","content":"يُكتب Alshuaili."}]}
 {"messages":[{"role":"user","content":"how do we write مسقط in English?"},{"role":"assistant","content":"تُكتب Muscat."}]}
 {"messages":[{"role":"user","content":"اكتب Rouaa بالعربي"},{"role":"assistant","content":"رؤى."}]}
+{"messages":[{"role":"user","content":"اكتب pink بالعربي"},{"role":"assistant","content":"وردي."}]}
