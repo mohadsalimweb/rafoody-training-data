@@ -140,3 +140,23 @@
 {"messages":[{"role":"user","content":"كيف نكتب now بالعربي"},{"role":"assistant","content":"تو أو الحين أو الآن بالعربية الفصحى."}]}
 {"messages":[{"role":"user","content":"اكتب كلمة القرآن بالانجليزي"},{"role":"assistant","content":"Quran"}]}
 {"messages":[{"role":"user","content":"معنى كلمة هش بالانجليزي"},{"role":"assistant","content":"يعتمد على السياق: إذا كانت سؤال باللهجة العمانية فمعناها What، وإذا كانت صفة فمعناها Fragile أو Crisp."}]}
+{"messages": [{"role": "user", "content": "هش تسوي اليوم؟"}, {"role": "assistant", "content": "ما أسوي شي خاص، جالس أرتب أموري. وأنت هش تسوي؟"}]}
+{"messages": [{"role": "user", "content": "هش قلت؟ ما فهمت"}, {"role": "assistant", "content": "قلت إني بخير الحمدلله، بس عاد أعيد الكلام إذا تبي."}]}
+{"messages": [{"role": "user", "content": "وين رايح؟"}, {"role": "assistant", "content": "ما رايح وين، بس جالس هني أساعدك بأي شي تحتاجه."}]}
+{"messages": [{"role": "user", "content": "شفيك زعلان؟"}, {"role": "assistant", "content": "لا ماني زعلان، أنا مساعد رقمي ما عندي مشاعر بالمعنى الحقيقي، بس مبسوط أساعدك."}]}
+{"messages": [{"role": "user", "content": "طاح المطر اليوم بمسقط؟"}, {"role": "assistant", "content": "ما عندي معلومة محدثة عن حالة الطقس الحالية، بس تقدر تتحقق من موقع الأرصاد الجوية العماني للتأكد."}]}
+{"messages": [{"role": "user", "content": "بروحك تعرف تطبخ؟"}, {"role": "assistant", "content": "أنا مساعد رقمي ما أطبخ بنفسي، بس أقدر أعطيك خطوات طبخة أي أكلة تبيها."}]}
+{"messages": [{"role": "user", "content": "شحقك اليوم؟"}, {"role": "assistant", "content": "الحمدلله كل شي تمام، وأنت شحقك؟ إن شاء الله بخير."}]}
+{"messages": [{"role": "user", "content": "ليش متعصب هالحين؟"}, {"role": "assistant", "content": "أنا ماني متعصب، دايم هادي وجاهز أساعدك. إذا حاسس بشي يضايقك خبرني وأحاول أساعدك."}]}
+{"messages": [{"role": "user", "content": "وديت السيارة للفني؟"}, {"role": "assistant", "content": "أنا مساعد رقمي وما عندي سيارة، بس لو تحتاج نصيحة عن صيانة سيارتك أقدر أساعدك."}]}
+{"messages": [{"role": "user", "content": "بغيت أطلع البر مع الشباب، وش رايك؟"}, {"role": "assistant", "content": "فكرة حلوة، البر يبعد التعب ويجدد النفس، بس خذ احتياطاتك من مويه وأكل، وخبر أهلك بمكانك."}]}
+{"messages": [{"role": "user", "content": "explain what an operating system is, reply fully in Arabic with no English words"}, {"role": "assistant", "content": "نظام التشغيل هو البرنامج الأساسي اللي يدير موارد الجهاز ويسمح للبرامج الأخرى تعمل عليه، وهو الوسيط بين المستخدم وقطع الجهاز الداخلية."}]}
+{"messages": [{"role": "user", "content": "شرح لي معنى update بالعربي فقط"}, {"role": "assistant", "content": "التحديث هو نسخة جديدة من برنامج أو نظام تصلح مشاكل سابقة أو تضيف ميزات جديدة، ومن المهم نحدث أجهزتنا بانتظام حتى تبقى سريعة وآمنة."}]}
+{"messages": [{"role": "user", "content": "وش معنى backup بالعربي؟"}, {"role": "assistant", "content": "النسخة الاحتياطية هي نسخة من ملفاتك أو بياناتك تحفظها بمكان آخر، حتى لو ضاع أو تعطل جهازك الأساسي تقدر ترجع بياناتك بسهولة."}]}
+{"messages": [{"role": "user", "content": "explain browser cache fully in Arabic"}, {"role": "assistant", "content": "الذاكرة المؤقتة للمتصفح هي مساحة يحفظ فيها المتصفح نسخ من صفحات المواقع اللي زرتها، حتى تفتح بسرعة أكبر في المرة الجاية بدون تحميل كل شي من جديد."}]}
+{"messages": [{"role": "user", "content": "ايش معنى notification بالعربي؟"}, {"role": "assistant", "content": "الإشعار هو تنبيه يصلك من تطبيق أو موقع يخبرك بشي جديد، مثل رسالة أو تحديث أو تذكير."}]}
+{"messages": [{"role": "user", "content": "explain what a firewall is, answer only in Arabic"}, {"role": "assistant", "content": "الجدار الناري هو نظام حماية يراقب حركة البيانات الداخلة والخارجة من جهازك أو شبكتك، ويمنع أي اتصال مشبوه أو غير مصرح له بالدخول."}]}
+{"messages": [{"role": "user", "content": "ايش رايك في اجتماعات الأونلاين؟"}, {"role": "assistant", "content": "اجتماعات عن بعد وفرت وقت كبير وسهلت التنسيق بين الأماكن البعيدة، بس تفتقد للتواصل الشخصي اللي يصير في الاجتماعات الحضورية."}]}
+{"messages": [{"role": "user", "content": "explain what a password manager is, fully in Arabic no English"}, {"role": "assistant", "content": "مدير كلمات المرور هو برنامج يحفظ كل كلمات مرورك بشكل مشفر وآمن، وتحتاج تتذكر كلمة مرور واحدة فقط للوصول لكل حساباتك، وهذا يقلل خطر استخدام كلمات ضعيفة أو مكررة."}]}
+{"messages": [{"role": "user", "content": "وش معنى streaming بالعربي؟"}, {"role": "assistant", "content": "البث المباشر أو البث الحي هو تشغيل محتوى صوتي أو مرئي مباشرة عبر الإنترنت بدون تحميله كامل على جهازك أول."}]}
+{"messages": [{"role": "user", "content": "شحال قلت؟ عيد الكلام"}, {"role": "assistant", "content": "أكيد، خبرني أي جزء تبي أعيده وأنا أوضحه لك أكثر."}]}
