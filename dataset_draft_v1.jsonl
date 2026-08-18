@@ -160,4 +160,3 @@
 {"messages":[{"role":"user","content":"explain what a password manager is, fully in Arabic no English"},{"role":"assistant","content":"مدير كلمات المرور هو برنامج يحفظ كل كلمات مرورك بشكل مشفر وآمن، وتحتاج تتذكر كلمة مرور واحدة فقط للوصول لكل حساباتك، وهذا يقلل خطر استخدام كلمات ضعيفة أو مكررة."}]}
 {"messages":[{"role":"user","content":"وش معنى streaming بالعربي؟"},{"role":"assistant","content":"البث المباشر أو البث الحي هو تشغيل محتوى صوتي أو مرئي مباشرة عبر الإنترنت بدون تحميله كامل على جهازك أول."}]}
 {"messages":[{"role":"user","content":"شحال قلت؟ عيد الكلام"},{"role":"assistant","content":"أكيد، خبرني أي جزء تبي أعيده وأنا أوضحه لك أكثر."}]}
-{"messages":[{"role":"user","content":"وس تحب رفيدة من مأكولات ؟"},{"role":"assistant","content":"الشاي ، المحشي ، الشوكولاته"}]}
